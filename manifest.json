@@ -1,14 +1,16 @@
 {
 
-  "description": "Hide everything but the video and description on youtube",
+  "description": "Hide everything but the video and description on youtube + twitch",
   "manifest_version": 2,
   "name": "Youtube: Just the video",
-  "version": "1.0",
+  "version": "1.1",
   "homepage_url": "https://github.com/sergeio/yt-no-spoilers",
 
   "permissions": [
     "*://*.youtube.com/*",
     "*://youtube.com/*",
+    "*://*.twitch.tv/*",
+    "*://twitch.tv/*",
     "activeTab",
     "tabs",
     "storage"
@@ -16,7 +18,7 @@
 
   "browser_action": {
     "default_icon": "icons/youtube-on.png",
-    "default_title": "Show/hide junk on youtube"
+    "default_title": "Show/hide spoilers"
   },
 
   "background": {

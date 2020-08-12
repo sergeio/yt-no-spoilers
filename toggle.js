@@ -1,26 +1,34 @@
-const hideElements = `
+const youtubeCss = `
 #secondary, #info, #masthead-container, #related, #comments, .ytp-progress-bar-container, .ytp-time-display {
-    display: none !important;
+  display: none !important;
 }
 .html5-video-container, .html5-main-video {
-    width: 100% !important;
-    height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 .ytp-cued-thumbnail-overlay-image {
-    z-index: 11;
+  z-index: 11;
 }
 .ytp-chrome-controls, .ytp-chrome-bottom {
-    left: 0 !important;
-    width: 100% !important;
+  left: 0 !important;
+  width: 100% !important;
 }
 #page-manager.ytd-app {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 `
+const twitchCss = `
+#sideNav, .vod-seekbar-time-labels, .seekbar-interaction-area {
+  display: none !important;
+}
+div[data-test-selector="content"] {
+  display: none !important;
+}
+`
+// .tw-mg-t-2 .tw-mg-x-2
+const injectCss = youtubeCss + twitchCss;
+
 async function isActive() {
-  a = await browser.storage.local.get('ytNoSpoilersActive')
-  console.log(a)
-  console.log(a.ytNoSpoilersActive)
   return (await browser.storage.local.get('ytNoSpoilersActive')).ytNoSpoilersActive;
 }
 
@@ -32,7 +40,7 @@ async function toggleActive(e) {
 }
 
 async function activate() {
-  browser.tabs.insertCSS({code: hideElements});
+  browser.tabs.insertCSS({code: injectCss});
   browser.browserAction.setIcon({ path: {
     32: "icons/youtube-on.png"
   }});
@@ -40,7 +48,7 @@ async function activate() {
 }
 
 async function deactivate() {
-  browser.tabs.removeCSS({code: hideElements});
+  browser.tabs.removeCSS({code: injectCss});
   browser.browserAction.setIcon({ path: {
     32: "icons/youtube-off.png"
   }});
@@ -50,6 +58,7 @@ async function deactivate() {
 async function applyCSS() {
   active = await isActive();
   console.log('applyCSS!', active);
+  console.log('active!', active);
   if (active) {
     activate();
   } else {
