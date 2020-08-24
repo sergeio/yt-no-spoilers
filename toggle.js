@@ -40,7 +40,7 @@ async function toggleActive(e) {
 }
 
 async function activate() {
-  browser.tabs.insertCSS({code: injectCss});
+  browser.tabs.insertCSS({code: injectCss, runAt: 'document_start'});
   browser.browserAction.setIcon({ path: {
     32: "icons/youtube-on.png"
   }});
@@ -48,7 +48,7 @@ async function activate() {
 }
 
 async function deactivate() {
-  browser.tabs.removeCSS({code: injectCss});
+  browser.tabs.removeCSS({code: injectCss, runAt: 'document_start'});
   browser.browserAction.setIcon({ path: {
     32: "icons/youtube-off.png"
   }});
