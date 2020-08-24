@@ -1,0 +1,6 @@
+#! /bin/bash
+
+ZIP_FILE=yt-no-spoilers.zip
+
+rm "$ZIP_FILE"
+zip -r "$ZIP_FILE" *
