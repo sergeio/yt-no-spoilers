@@ -2,6 +2,9 @@ const youtubeCss = `
 #secondary, #info, #masthead-container, #related, #comments, .ytp-progress-bar-container, .ytp-time-display, ytd-thumbnail-overlay-time-status-renderer {
   display: none !important;
 }
+.ytp-player-content, .ytp-ce-element {
+  display: none !important;
+}
 .html5-video-container, .html5-main-video {
   width: 100% !important;
   height: 100% !important;
