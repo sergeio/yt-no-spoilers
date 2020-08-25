@@ -28,6 +28,16 @@
     "scripts": ["toggle.js"]
   },
 
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtube.com/*"
+      ],
+      "js": ["disableYtAutoplay.js"]
+    }
+  ],
+
   "web_accessible_resources": [
     "icons/*.png"
   ]
