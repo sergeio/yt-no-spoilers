@@ -6,7 +6,7 @@
   "version": "1.2",
   "homepage_url": "https://github.com/sergeio/yt-no-spoilers",
   "icons": {
-    "32": "icons/youtube-on.png"
+    "128": "icons/youtube-logo.png"
   },
 
   "permissions": [
