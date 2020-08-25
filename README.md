@@ -8,3 +8,6 @@ too.
 This is useful when you are watching something on youtube that
 could be "spoiled" by being able to see the length of the current
 video, or by video recommendations.
+
+[Install](https://addons.mozilla.org/en-US/firefox/addon/youtube-just-the-video/)
+this addon.
