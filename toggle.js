@@ -1,5 +1,5 @@
 const youtubeCss = `
-#secondary, #info, #masthead-container, #related, #comments, .ytp-progress-bar-container, .ytp-time-display, ytd-thumbnail-overlay-time-status-renderer {
+#secondary, #info, #masthead-container, #chat, #related, #comments, .ytp-progress-bar-container, .ytp-time-display, ytd-thumbnail-overlay-time-status-renderer {
   display: none !important;
 }
 .ytp-player-content, .ytp-ce-element {
