@@ -1,10 +1,8 @@
 if (!window.cancelInterval) {
   window.cancelInterval = setInterval(
     () => {
-      button = document.getElementsByClassName('ytp-upnext-cancel-button')[0]
-      upnext = document.getElementsByClassName('ytp-upnext')[0]
-      isUpNextHidden = upnext.classList.contains('ytp-upnext-autoplay-paused')
-      if (button && !isUpNextHidden) { button.click() }
+      button = document.getElementsByClassName('ytp-autonav-endscreen-upnext-cancel-button')[0]
+      if (button) { button.click() }
     },
     4000,
   )
