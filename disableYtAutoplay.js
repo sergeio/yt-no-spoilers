@@ -1,8 +1,13 @@
+async function isActive() {
+  return (await browser.storage.local.get('ytNoSpoilersActive')).ytNoSpoilersActive;
+}
+
 if (!window.cancelInterval) {
   window.cancelInterval = setInterval(
-    () => {
-      button = document.getElementsByClassName('ytp-autonav-endscreen-upnext-cancel-button')[0]
-      if (button) { button.click() }
+    async () => {
+      const check = document.getElementsByClassName('ytp-autonav-toggle-button')[0]
+      const active = await isActive();
+      if (active && check.attributes["aria-checked"].value === "true") { check.click() }
     },
     4000,
   )
