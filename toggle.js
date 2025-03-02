@@ -5,6 +5,9 @@ const youtubeCss = `
 .ytp-player-content, .ytp-ce-element {
   display: none !important;
 }
+.ytd-video-preview {
+  display: none !important;
+}
 .ytp-cued-thumbnail-overlay-image {
   z-index: 11;
 }
