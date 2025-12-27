@@ -1,7 +1,6 @@
 const youtubeCss = `
 #secondary-inner,
 #info,
-#masthead-container,
 #chat,
 #related,
 #description,
@@ -29,9 +28,6 @@ yt-thumbnail-overlay-badge-view-model,
 .ytp-chrome-controls, .ytp-chrome-bottom {
   left: 0 !important;
   width: 100% !important;
-}
-#page-manager.ytd-app {
-  margin-top: 0 !important;
 }
 `
 const twitchCss = `
