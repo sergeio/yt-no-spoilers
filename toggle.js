@@ -9,6 +9,7 @@ const youtubeCss = `
 #metadata-line,
 .ytp-progress-bar-container,
 .ytp-time-display,
+.ytp-suggestion-set,
 .ytThumbnailBottomOverlayViewModelHost,
 ytd-thumbnail-overlay-resume-playback-renderer,
 ytd-thumbnail-overlay-time-status-renderer,
